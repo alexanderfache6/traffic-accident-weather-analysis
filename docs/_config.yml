@@ -1,0 +1,12 @@
+title: US Traffic Accidents and Weather Events Analysis
+description: Developed for CS 4641 Machine Learning (Georgia Institute of Technology)
+
+# author: Alexander Fache
+# github_username: alexanderfache6
+
+github:
+  is_project_page: false
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-cayman
