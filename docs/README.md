@@ -8,11 +8,19 @@
 
 # Modules
 
-1 Feature Extraction, Dimensionality Reduction, Feature Ranking
+## 1 Feature Extraction, Dimensionality Reduction, Feature Ranking
 
-2 Supervised Learning
+- Preprocessing
+  - fill in missing categorical data with mode
+  - clean up date time objects
+  - replace True/False data with 1/0
+  - one-hot encoding for categorical data
+- PCA
+- Random Forest
 
-X Visualization
+## 2 Supervised Learning
+
+## X Visualization
 
 # References
 
