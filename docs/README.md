@@ -51,7 +51,7 @@ Features
 - Blue: Severity: 1
 
 ### Houston
-![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/docs/Houston/map_true.png "Map of Houston Accidents")
+![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/docs/map_true.png "Map of Houston Accidents")
 
 ### DBSCAN of Latitude and Longitude - Houston
 
