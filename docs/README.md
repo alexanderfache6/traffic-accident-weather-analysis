@@ -19,7 +19,7 @@ Features
 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 |
 | Precipitation(in) | Weather_Condition | Amenity | Bumpy | Crossing | Give_Way | Junction | No_Exit | Railway | Roundabout |
 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 |
-| Station | Stop | Traffic_Calming | Traffic_Signal | Turning_Loop | Sunrise_Sunset | Civil_Twilight | Nautical_Twilight | Astronomical_Twighlight |
+| Station | Stop | Traffic_Calming | Traffic_Signal | Turning_Loop | Sunrise_Sunset | Civil_Twilight | Nautical_Twilight | Astronomical_Twilight |
 
 [US Weather Events](https://www.kaggle.com/sobhanmoosavi/us-weather-events)
 
