@@ -1,11 +1,11 @@
-Notice: This project is still in progress.
+Note: This project is still in progress.
 
 # Overview
 
 
 # Datasets
 
-[US Accidents](https://www.kaggle.com/sobhanmoosavi/us-accidents)
+### [US Accidents](https://www.kaggle.com/sobhanmoosavi/us-accidents)
 
 Features
 
@@ -21,25 +21,49 @@ Features
 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 |
 | Station | Stop | Traffic_Calming | Traffic_Signal | Turning_Loop | Sunrise_Sunset | Civil_Twilight | Nautical_Twilight | Astronomical_Twilight |
 
-[US Weather Events](https://www.kaggle.com/sobhanmoosavi/us-weather-events)
+### [US Weather Events](https://www.kaggle.com/sobhanmoosavi/us-weather-events)
 
 # Modules
 
 ## 1 Feature Extraction, Dimensionality Reduction, Feature Ranking
 
-- Preprocessing
+### Preprocessing
   - fill in missing categorical data with mode
   - clean up date time objects
   - replace True/False data with 1/0
   - one-hot encoding for categorical data
-- PCA
-- Random Forest
+### Prinicple Component Analysis (PCA)
+
+- Aims to select principal components in Z space to attain the largest possible variance.
+
+![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/module1_data/Houston/correlation_original.png "Original Correlation")
+
+![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/module1_data/Houston/correlation_pca.png "PCA Correlation")
+
+### Random Forest Forward Feature Selection
+
+- Rank features based on importance.
+- Importance is detremined baesd on value of feature in constructing decision tree.
+
+![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/module1_data/Houston/random_forest.png "Random Forest Feature Importance")
 
 ## 2 Supervised Learning
 
 ### KNN
 
+#### Preprocessing
+
+#### Implementation
+
+#### Results
+
 ### Neural Network
+
+#### Preprocessing
+
+#### Implementation
+
+#### Results
 
 ## X Visualization
 
@@ -56,6 +80,8 @@ Features
 ### DBSCAN of Latitude and Longitude - Houston
 
 ![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/docs/map_dbscan_e001_s10.png "DBSCAN of Houston Accidents")
+
+# Conclusion
 
 # References
 
