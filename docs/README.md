@@ -1,4 +1,4 @@
-Note: This project is still in progress.
+ Note: This project is still in progress.
 
 # Overview
 
@@ -32,7 +32,8 @@ Features
   - clean up date time objects
   - replace True/False data with 1/0
   - one-hot encoding for categorical data
-### Prinicple Component Analysis (PCA)
+
+### Principle Component Analysis (PCA)
 
 - Aims to select principal components in Z space to attain the largest possible variance.
 
