@@ -6,6 +6,9 @@ find ./* -size +50M | cat >> .check
 #these files are too large (>50Mb) for GitHub and need to be ignored
 #if there are other files then they should probably be added to .gitignore
 
+git add .
+#or git add FILENAME
+
 git commit -m ""
 
 git push origin master
