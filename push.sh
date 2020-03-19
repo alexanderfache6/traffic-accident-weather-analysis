@@ -10,4 +10,4 @@ echo "Git Message: $message"
 
 git commit -m "$message"
 
-#git push origin master
+git push origin master
