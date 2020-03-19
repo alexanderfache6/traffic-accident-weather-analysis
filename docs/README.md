@@ -69,21 +69,21 @@ Features
 ## X Visualization
 
 ### US
-![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/docs/map_usa.png "Map of US Accidents")
+![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/moduleX_data/map_usa.png "Map of US Accidents")
 - Red: Severity 4
 - Yellow: Severity 3
 - Green: Severity: 2
 - Blue: Severity: 1
 
 ### Houston
-![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/docs/map_true.png "Map of Houston Accidents")
+![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/moduleX_data/Houston/map_true.png "Map of Houston Accidents")
 
 ### DBSCAN of Latitude and Longitude - Houston
 
-![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/docs/map_dbscan_e001_s10.png "DBSCAN of Houston Accidents")
+![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/moduleX_data/Houston/map_dbscan_e001_s10.png "DBSCAN of Houston Accidents")
 
 # Conclusion
 
 # References
 
-https://medium.com/deep-learning-turkey/google-colab-free-gpu-tutorial-e113627b9f5d
+- https://medium.com/deep-learning-turkey/google-colab-free-gpu-tutorial-e113627b9f5d
