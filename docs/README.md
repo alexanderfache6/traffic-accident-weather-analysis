@@ -46,7 +46,7 @@ Features
 - Rank features based on importance.
 - Importance is detremined baesd on value of feature in constructing decision tree.
 
-![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/module1_data/Houston/random_forest.png "Random Forest Feature Importance")
+![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/module1_data/Houston/random_forest_f101.png "Random Forest Feature Importance")
 
 ## 2 Supervised Learning
 
