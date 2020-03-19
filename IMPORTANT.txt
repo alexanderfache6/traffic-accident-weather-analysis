@@ -1,14 +1,10 @@
-git status
+After making changes go through these steps:
 
-find ./* -size +50M | cat >> .check
+1 - bash check.sh
+  - get all files that are greater than 50Mb
+2 - .check
+  - check this file to make sure all files are less than 50Mb
+3 - bash push.sh
+  - push changes to GitHub
 
-#check the .check file and ensure that all files shown are .npy or .xlsx
-#these files are too large (>50Mb) for GitHub and need to be ignored
-#if there are other files then they should probably be added to .gitignore
-
-git add .
-#or git add FILENAME
-
-git commit -m ""
-
-git push origin master
+In .gitignore leave a blank line at the end. This is necessary for check.sh
