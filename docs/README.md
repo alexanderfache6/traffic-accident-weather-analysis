@@ -28,10 +28,12 @@ Features
 ## 1 Feature Extraction, Dimensionality Reduction, Feature Ranking
 
 ### Preprocessing
-  - fill in missing categorical data with mode
+  - fill in missing categorical data with mode of category
   - clean up date time objects
+    - split into year, month, day, hour, minute, second
   - replace True/False data with 1/0
   - one-hot encoding for categorical data
+    - ex. Sunrise_Sunset = {Day, Night}. Turn into Sunrise_Sunset_Day = True/False, Sunrise_Sunset_Night = True/False
 
 ### Principle Component Analysis (PCA)
 
@@ -44,7 +46,7 @@ Features
 ### Random Forest Forward Feature Selection
 
 - Rank features based on importance.
-- Importance is detremined baesd on value of feature in constructing decision tree.
+- Importance is determined based on value of feature in constructing decision tree.
 
 ![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/module1_data/Houston/random_forest_f101.png "Random Forest Feature Importance")
 
