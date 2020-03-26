@@ -1,13 +1,17 @@
  Note: This project is still in progress.
 
-# Overview
+# Motivation
 
+- What is the problem?
+- Why is it important and why we should care?
 
 # Datasets
 
 ### [US Accidents](https://www.kaggle.com/sobhanmoosavi/us-accidents)
 
-Features
+3.0 million records of traffic accidents across 49 US states from February 2016 to December 2019.
+
+#### Features
 
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|---|
@@ -21,7 +25,14 @@ Features
 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 |
 | Station | Stop | Traffic_Calming | Traffic_Signal | Turning_Loop | Sunrise_Sunset | Civil_Twilight | Nautical_Twilight | Astronomical_Twilight |
 
+
+
 ### [US Weather Events](https://www.kaggle.com/sobhanmoosavi/us-weather-events)
+
+# Approach
+
+- Why do you think your approach can effectively solve your problem?
+- What is new in your approach?
 
 # Modules
 
@@ -87,5 +98,9 @@ Features
 # Conclusion
 
 # References
+
+- [1] Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, and Rajiv Ramnath. “A Countrywide Traffic Accident Dataset.”, arXiv preprint arXiv:1906.05409 (2019).
+
+- [2] Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, Radu Teodorescu, and Rajiv Ramnath. “Accident Risk Prediction based on Heterogeneous Sparse Data: New Dataset and Insights.” In proceedings of the 27th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, ACM, 2019.
 
 - https://medium.com/deep-learning-turkey/google-colab-free-gpu-tutorial-e113627b9f5d
