@@ -1,4 +1,6 @@
 *.npy
 *.xlsx
+./code/module1_data/GA/Xforest_f102.npy
+./code/module1_data/GA/Xstate_f194.npy
 ./code/module1_data/Houston/Xcity_f194.npy
 ./code/module1_data/Houston/Xforest_f101.npy
