@@ -29,13 +29,11 @@ We have used relevant features such as precipitation, weather condition, time of
 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 |
 | Station | Stop | Traffic_Calming | Traffic_Signal | Turning_Loop | Sunrise_Sunset | Civil_Twilight | Nautical_Twilight | Astronomical_Twilight |
 
-
-
 ### [US Weather Events](https://www.kaggle.com/sobhanmoosavi/us-weather-events)
 
 # Approach
 
-### Why do you think your approach can effectively solve your problem? 
+### Why do you think your approach can effectively solve your problem?
 ### What is new in your approach?
 
 # Modules
@@ -67,7 +65,7 @@ We have used relevant features such as precipitation, weather condition, time of
 
 ## 2 Supervised Learning
 
-### KNN
+### Logistic Regression
 
 #### Preprocessing
 
@@ -75,7 +73,15 @@ We have used relevant features such as precipitation, weather condition, time of
 
 #### Results
 
-### Neural Network
+### Support Vector Machines
+
+#### Preprocessing
+
+#### Implementation
+
+#### Results
+
+### Decision Trees
 
 #### Preprocessing
 
@@ -92,12 +98,8 @@ We have used relevant features such as precipitation, weather condition, time of
 - Green: Severity: 2
 - Blue: Severity: 1
 
-### Houston
-![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/moduleX_data/Houston/map_true.png "Map of Houston Accidents")
+### Georgia
 
-### DBSCAN of Latitude and Longitude - Houston
-
-![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/moduleX_data/Houston/map_dbscan_e001_s10.png "DBSCAN of Houston Accidents")
 
 # Conclusion
 
