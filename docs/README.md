@@ -50,7 +50,7 @@ We have used relevant features such as precipitation, weather condition, time of
 
 - Aims to select principal components in Z space to attain the largest possible variance.
 
-![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/module1_data/GA/correlation_original.png "Original Correlation")
+![alt text](../code/module1_data/GA/correlation_original.png "Original Correlation")
 
 ![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/module1_data/GA/correlation_pca.png "PCA Correlation")
 
