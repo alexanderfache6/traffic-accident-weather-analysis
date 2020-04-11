@@ -29,8 +29,6 @@ We have used relevant features such as precipitation, weather condition, time of
 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 |
 | Station | Stop | Traffic_Calming | Traffic_Signal | Turning_Loop | Sunrise_Sunset | Civil_Twilight | Nautical_Twilight | Astronomical_Twilight |
 
-### [US Weather Events](https://www.kaggle.com/sobhanmoosavi/us-weather-events)
-
 # Approach
 
 ### Why do you think your approach can effectively solve your problem?
@@ -52,47 +50,69 @@ We have used relevant features such as precipitation, weather condition, time of
 
 - Aims to select principal components in Z space to attain the largest possible variance.
 
-![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/module1_data/Houston/correlation_original.png "Original Correlation")
+![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/module1_data/GA/correlation_original.png "Original Correlation")
 
-![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/module1_data/Houston/correlation_pca.png "PCA Correlation")
+![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/module1_data/GA/correlation_pca.png "PCA Correlation")
 
 ### Random Forest Forward Feature Selection
 
 - Rank features based on importance.
 - Importance is determined based on value of feature in constructing decision tree.
 
-![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/module1_data/Houston/random_forest_f101.png "Random Forest Feature Importance")
+![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/module1_data/GA/random_forest_f102.png "Random Forest Feature Importance")
 
 ## 2 Supervised Learning
 
 ### Logistic Regression
 
-#### Preprocessing
 
-#### Implementation
-
-#### Results
-
-### Support Vector Machines
 
 #### Preprocessing
 
+
+
 #### Implementation
 
+
+
 #### Results
+
+
+
+### Support Vector Machine
+
+#### Preprocessing
+
+
+
+#### Implementation
+
+
+
+#### Results
+
+
 
 ### Decision Trees
 
 #### Preprocessing
 
+
+
 #### Implementation
 
+
+
 #### Results
+
+
 
 ## X Visualization
 
 ### US
+
 ![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/moduleX_data/map_usa.png "Map of US Accidents")
+
 - Red: Severity 4
 - Yellow: Severity 3
 - Green: Severity: 2
@@ -100,8 +120,15 @@ We have used relevant features such as precipitation, weather condition, time of
 
 ### Georgia
 
+![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/moduleX_data/GA/GA.png "Map of GA Accidents")
+
+![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/moduleX_data/GA/colormap.png "Severity Color")
+
+- 1 | 2 | 3 | 4
 
 # Conclusion
+
+
 
 # References
 
