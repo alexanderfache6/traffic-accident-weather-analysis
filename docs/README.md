@@ -120,7 +120,7 @@ We have used relevant features such as precipitation, weather condition, time of
 
 ### Georgia
 
-![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/moduleX_data/GA/GA.png "Map of GA Accidents")
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/GA.png?token=AGCBXXSWMABYG3ZU767G5OS6TNUCY "Map of GA Accidents")
 
 ![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/moduleX_data/GA/colormap.png "Severity Color")
 
