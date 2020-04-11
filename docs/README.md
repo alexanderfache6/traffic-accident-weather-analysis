@@ -50,16 +50,16 @@ We have used relevant features such as precipitation, weather condition, time of
 
 - Aims to select principal components in Z space to attain the largest possible variance.
 
-![alt text](../code/module1_data/GA/correlation_original.png "Original Correlation")
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/module1_data/GA/correlation_original.png?token=AGCBXXQBKWDUN7AHONNL5IK6TNUPK "Original Correlation")
 
-![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/module1_data/GA/correlation_pca.png "PCA Correlation")
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/module1_data/GA/correlation_pca.png?token=AGCBXXTXJNVRX6J2XDXBAUK6TNUQK "PCA Correlation")
 
 ### Random Forest Forward Feature Selection
 
 - Rank features based on importance.
 - Importance is determined based on value of feature in constructing decision tree.
 
-![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/module1_data/GA/random_forest_f102.png "Random Forest Feature Importance")
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/module1_data/GA/random_forest_f102.png?token=AGCBXXRIL3BKBTJ4T63UACC6TNURM "Random Forest Feature Importance")
 
 ## 2 Supervised Learning
 
@@ -111,7 +111,7 @@ We have used relevant features such as precipitation, weather condition, time of
 
 ### US
 
-![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/moduleX_data/map_usa.png "Map of US Accidents")
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/map_usa.png?token=AGCBXXR5JQCTMUPC43ZJ3AS6TNULW "Map of US Accidents")
 
 - Red: Severity 4
 - Yellow: Severity 3
@@ -122,7 +122,7 @@ We have used relevant features such as precipitation, weather condition, time of
 
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/GA.png?token=AGCBXXSWMABYG3ZU767G5OS6TNUCY "Map of GA Accidents")
 
-![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/moduleX_data/GA/colormap.png "Severity Color")
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/colormap.png?token=AGCBXXWRWQFSQK6CDVVVR5S6TNUNM "Severity Color")
 
 - 1 | 2 | 3 | 4
 
