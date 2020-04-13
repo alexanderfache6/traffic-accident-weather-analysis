@@ -34,6 +34,18 @@ We have used relevant features such as precipitation, weather condition, time of
 ### Why do you think your approach can effectively solve your problem?
 ### What is new in your approach?
 
+### US
+
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/colormap.png?token=AGCBXXWRWQFSQK6CDVVVR5S6TNUNM "Severity Color")
+
+Severity 1 | 2 | 3 | 4
+
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/map_usa.png?token=AGCBXXR5JQCTMUPC43ZJ3AS6TNULW "Map of US Accidents")
+
+### Georgia
+
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/GA.png?token=AGCBXXSWMABYG3ZU767G5OS6TNUCY "Map of GA Accidents")
+
 # Modules
 
 ## 1 Feature Extraction, Dimensionality Reduction, Feature Ranking
@@ -65,9 +77,7 @@ We have used relevant features such as precipitation, weather condition, time of
 
 ### Logistic Regression
 
-
-
-#### Preprocessing
+#### Description
 
 
 
@@ -76,26 +86,32 @@ We have used relevant features such as precipitation, weather condition, time of
 
 
 #### Results
-
 
 
 ### Support Vector Machine
 
-#### Preprocessing
+#### Description
 
 
 
 #### Implementation
 
+```
+from sklearn.svm import SVC
 
+svm = SVC(kernel='rbf', C=c, gamma=g).fit(X_train, y_train)
+
+score_train = svm.score(X_train, y_train)
+score_test = svm.score(X_test, y_test)
+```
 
 #### Results
 
-
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/module2_data/GA/SupportVectorMachines/SVM_.png?token=AGCBXXSPGX2KQUD65FCI5YC6TTXY4 "C vs Gamma Accuracy")
 
 ### Decision Trees
 
-#### Preprocessing
+#### Description
 
 
 
@@ -106,25 +122,6 @@ We have used relevant features such as precipitation, weather condition, time of
 #### Results
 
 
-
-## X Visualization
-
-### US
-
-![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/map_usa.png?token=AGCBXXR5JQCTMUPC43ZJ3AS6TNULW "Map of US Accidents")
-
-- Red: Severity 4
-- Yellow: Severity 3
-- Green: Severity: 2
-- Blue: Severity: 1
-
-### Georgia
-
-![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/GA.png?token=AGCBXXSWMABYG3ZU767G5OS6TNUCY "Map of GA Accidents")
-
-![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/colormap.png?token=AGCBXXWRWQFSQK6CDVVVR5S6TNUNM "Severity Color")
-
-- 1 | 2 | 3 | 4
 
 # Conclusion
 
