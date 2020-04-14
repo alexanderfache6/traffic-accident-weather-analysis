@@ -1,4 +1,5 @@
 Note: This project is still in progress.
+
 https://mahdi-roozbahani.github.io/CS46417641-spring2020/other/Scoring%20scheme-guidance.pdf
 
 # Motivation
@@ -18,11 +19,13 @@ In a 2019 Business Insider report, the city of Atlanta is reported to be ranked 
 - What are its characteristics (e.g. number of features, # of records, temporal or not, etc.)
 ````
 
-### [US Accidents](https://www.kaggle.com/sobhanmoosavi/us-accidents)
+## [US Accidents](https://www.kaggle.com/sobhanmoosavi/us-accidents) 
 
-3.0 million records of traffic accidents across 49 US states from February 2016 to December 2019.
+The dataset used for this project was found on Kaggle and put together by [1]-[2]. It contains 3.0 million records of traffic accidents across 49 US states from February 2016 to December 2019. Among these records, variables such as time of day, latitute/longitude, weather conditions, road features, etc were collected.
 
-#### Features
+### Features
+
+Shown below are the 49 original features each identified by their keyword as saved in the corresponding Pandas DataFrame:
 
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|---|
@@ -38,14 +41,20 @@ In a 2019 Business Insider report, the city of Atlanta is reported to be ranked 
 
 ### US
 
-Distribution of samples across the continental US.
+First we consider the distribution of samples across the entire dataset noting the following color map to indicate the four levels of crash severity that will be used as our supervised labels:
 
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/colormap.png?token=AGCBXXWRWQFSQK6CDVVVR5S6TNUNM "Severity Color")
 corresponds to Severity 1, 2, 3, 4.
 
+Distribution of samples across the continental US.
+
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/map_usa.png?token=AGCBXXR5JQCTMUPC43ZJ3AS6TNULW "Map of US Accidents")
 
-![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/us_histogram.png?token=AGCBXXQL3CCHTMVH6YP7KH26TZAXY "Frequncy of Severity in US")
+[//]: # (Along with a map of crash occurance, the frequency of the four levels of severity is important in our analysis.)
+
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/us_histogram.png?token=AGCBXXQL3CCHTMVH6YP7KH26TZAXY "Frequency of Severity in US")
+
+[//]: # (as well as the accident occurance for each state.)
 
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/accidents_per_state.png?token=AGCBXXQBYLPFREZ3FDQZ7BC6TZATM "Accident Counts for all States")
 
@@ -57,12 +66,12 @@ Distribution of samples across the state of Georgia.
 
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/ga_histogram.png?token=AGCBXXVQ4BSPAE3CYC2KFNS6TZAVC "Frequency of Severity in GA")
 
-## Approach
+# Approach
 
-### What are you trying to do to tackle with your project motivation or problem?
+## What are you trying to do to tackle with your project motivation or problem?
 By implementing a real-time updating machine learning model fed with informative data, users (drivers) can explore the most dangerous locations along their commutes during extreme weather conditions to either avoid or take extra precautions. As more and more Atlanta drivers become aware of road conditions along their respective routes, there could be a significant reduction in the number of automotive accidents, injuries, and fatalities. Our team has developed a risk assessment for regions that drivers can use to evaluate driving conditions and take necessary precautions.
 
-### What have people already done?
+## What have people already done?
 We have used relevant features such as precipitation, weather condition, time of day, road type, severity and so forth to calculate risk scores along Atlanta roads. WILL COME BACK TO THIS AFTER GROUP DISCUSSION MEETING
 
 ````
