@@ -118,6 +118,8 @@ During preprocessing, the data set is first cleaned up. This means:
 
 #### Implementation
 
+Hyperparameters
+
 - describe
 - show key code lines
 
@@ -132,6 +134,19 @@ During preprocessing, the data set is first cleaned up. This means:
 SVM maps data into a high dimension space so that decision boundaries can distinguish between the different classes.
 
 #### Implementation
+
+Hyperparameters
+
+- C (regularization)
+  - ...
+- <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma" title="\gamma" /></a> (kernel coefficient)
+  - ...
+
+Parameters
+
+- kernel (kernel type)
+  - 'rbf' (radial based function)
+
 
 ```
 from sklearn.svm import SVC
@@ -153,6 +168,8 @@ score_test = svm.score(X_test, y_test)
 - 1-2 sentence description
 
 #### Implementation
+
+Hyperparameters
 
 - describe
 - show key code lines
