@@ -79,7 +79,7 @@ corresponds to Severity 1, 2, 3, 4.
 As more and more Georgia drivers become aware of road conditions along their respective routes, there could be a significant reduction in the number of automotive accidents, injuries, and fatalities. Our team has used several predictive models to determine severity (from a scale of 1-4) for exclusively the roads in Georgia that can be used to evaluate driving conditions and take necessary precautions. 
 
 ## What have people already done?
-In the study “A Perspective Analysis of Traffic Accidents using Data Mining Techniques” by S. Krishnaveni and Dr. Hemalatha, the researchers explored Naive Bayes Bayesian classifier, AdaBoostM1 Meta classifier, Random Forest Tree classifier, and PART Rule classifier to predict injury severity caused by traffic accidents in Hong Kong. The research collected data based on accident (severity, weather, type of collision, road classification), vehicle (driver age, gender, manufacture date) , and causality (location of casualty, degree of injury). As a result of this study, the Random Forest predictive model outperformed the other three models.
+In the study “A Perspective Analysis of Traffic Accidents using Data Mining Techniques” by S. Krishnaveni and Dr. Hemalatha, the researchers explored Naive Bayes Bayesian classifier, AdaBoostM1 Meta classifier, Random Forest Tree classifier, and PART Rule classifier to predict injury severity caused by traffic accidents in Hong Kong [5]. The research collected data based on accident (severity, weather, type of collision, road classification), vehicle (driver age, gender, manufacture date) , and causality (location of casualty, degree of injury). As a result of this study, the Random Forest predictive model outperformed the other three models.
 
 In our study, we have used relevant features such as severity, precipitation, weather condition, time of day, road type, and so forth to predict severity along Georgia roads. We used Principle Component Analysis as our dimension reduction technique on our dataset. Moreover, we have implemented Logistic Regression, Support Vector Machine, and Decision Tree classification models to see which model can predict severity most accurately.
 
@@ -233,7 +233,7 @@ Hyperparameters
 # References
 
 - [1] How do weather events impact roads? (2018). Federal Highway Administration. Retrieved from 
-https://ops.fhwa.dot.gov/weather/q1 roadimpact.htm
+https://ops.fhwa.dot.gov/weather/q1roadimpact.htm
 
 - [2] https://www.kaggle.com/sobhanmoosavi/us-accidents
 
