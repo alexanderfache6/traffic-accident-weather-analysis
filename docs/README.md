@@ -3,9 +3,13 @@ Note: This project is still in progress.
 https://mahdi-roozbahani.github.io/CS46417641-spring2020/other/Scoring%20scheme-guidance.pdf
 
 # Motivation
-In a 2019 Business Insider report, the city of Atlanta is reported to be ranked as number 11 on the most traffic congested cities in the United States [CITATION]. Unfortunately, thousands of Atlanta commuters are plagued with motor vehicle collisions every year in various traffic conditions. According to a published 2016 traffic report of Fulton County, Atlanta has faced an estimate of 60,984 automotive accidents with 12,875 injuries. One explanation for higher crash rates in Atlanta roads is that extreme road conditions due to weather (e.g. rain, snow, ice) create potential safety hazards. Such potential safety hazards include, but not limited to: driver(s) lose complete control of vehicle(s), improper lane change, or obstruction of visibility. The United States Department of Transportation Road Weather Management Program reports that annual averages from 2007-2016 show 15% of vehicle crashes occurred due to wet pavements with 10% due to rain, 4% due to snow, and 3% due to ice [1].
+In a 2008 crash analysis report, the state of Georgia had an estimate of 342,534 traffic accidents. Out of which, 133,555 individuals were injured and 1,703 were dead. On an average, Georgia faces around 1,000 traffic accidents per day.
 
-Eliminating weather conditions and associated factors is not possible, however, understanding relations between such conditions and crash risk could make drivers more aware of dangerous conditions. The following presents an analysis of US traffic accidents surveyed over the span of several years with the intention of developing a severity assessment model, ie. how do weather conditions impact crash damage. 
+One explanation for higher crash rates in Georgia roads is that extreme road conditions due to weather (e.g. rain, snow, ice) create potential safety hazards. Such potential safety hazards include, but not limited to: driver(s) lose complete control of vehicle(s), improper lane change, or obstruction of visibility. 
+The United States Department of Transportation Road Weather Management Program reports that annual averages from 2007-2016 show 15% of vehicle crashes occurred due to wet pavements with 10% due to rain, 4% due to snow, and 3% due to ice [1].
+
+Eliminating weather conditions and associated factors is not possible, however, understanding relations between such conditions and crash risk could make drivers more aware of dangerous conditions. The following presents an analysis of US traffic accidents surveyed over the span of several years with the intention of developing a severity assessment model, ie. How do weather conditions impact crash damage?
+
 
 ````
 - was the motivation clear? X
@@ -72,10 +76,14 @@ corresponds to Severity 1, 2, 3, 4.
 # Approach
 
 ## What are you trying to do to tackle with your project motivation or problem?
-By implementing a real-time updating machine learning model fed with informative data, users (drivers) can explore the most dangerous locations along their commutes during extreme weather conditions to either avoid or take extra precautions. As more and more Atlanta drivers become aware of road conditions along their respective routes, there could be a significant reduction in the number of automotive accidents, injuries, and fatalities. Our team has developed a risk assessment for regions that drivers can use to evaluate driving conditions and take necessary precautions.
+As more and more Georgia drivers become aware of road conditions along their respective routes, there could be a significant reduction in the number of automotive accidents, injuries, and fatalities. Our team has used several predictive models to determine severity (from a scale of 1-4) for exclusively the roads in Georgia that can be used to evaluate driving conditions and take necessary precautions. 
 
 ## What have people already done?
-We have used relevant features such as precipitation, weather condition, time of day, road type, severity and so forth to calculate risk scores along Atlanta roads. WILL COME BACK TO THIS AFTER GROUP DISCUSSION MEETING
+In the study “A Perspective Analysis of Traffic Accidents using Data Mining Techniques” by S. Krishnaveni and Dr. Hemalatha, the researchers explored Naive Bayes Bayesian classifier, AdaBoostM1 Meta classifier, Random Forest Tree classifier, and PART Rule classifier to predict injury severity caused by traffic accidents in Hong Kong [5]. The research collected data based on accident (severity, weather, type of collision, road classification), vehicle (driver age, gender, manufacture date) , and causality (location of casualty, degree of injury). As a result of this study, the Random Forest predictive model outperformed the other three models.
+
+In our study, we have used relevant features such as severity, precipitation, weather condition, time of day, road type, and so forth to predict severity along Georgia roads. We used Principle Component Analysis as our dimension reduction technique on our dataset. Moreover, we have implemented Logistic Regression, Support Vector Machine, and Decision Tree classification models to see which model can predict severity most accurately.
+
+By implementing a predictive machine learning model fed with informative data, Georgia users (drivers) can explore the most dangerous locations along their commutes during extreme weather conditions to either avoid or take extra precautions. Our study can also be extended to locations beyond Georgia, but for short, we focused on this specific state to explore with.
 
 ````
 - Why do you think your approach can effectively solve your problem?
@@ -114,14 +122,49 @@ During preprocessing, the data set is first cleaned up. This means:
 
 #### Description
 
-- 1-2 sentence description
+Logistic regression is a regression technique employed to fit accident systems. Logistic regression techniques have been used to model probabilistic systems to predict future events. 
 
 #### Implementation
 
-Hyperparameters
+Hyperparameters:
 
-- describe
-- show key code lines
+X, y: The first parameter is the dataset that is being selected to use
+
+train_size: This parameter sets the size of the training dataset. 0.8 was used based on the ideal split 80:20 for training/testing
+
+test_size: This parameter specifies the size of the testing dataset. 0.2 was used based on the ideal split 80:20 for training/testing
+
+random_state: The default mode performs a random split using np.random. Was set to 0
+
+
+#Assign the data:
+
+df=df_state_dummy
+
+#Set the target for the prediction:
+
+target='Severity'
+
+
+#Create arrays for the features and the response variable:
+
+#set X and y:
+
+y = df[target]
+
+X = df.drop(target, axis=1)
+
+#Split the data set into training and testing data sets:
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, train_size=0.80, random_state=0, shuffle=True)
+
+print('X train:', X_train.shape)
+
+print('y train:', y_train.shape)
+
+print('X test: ', X_test.shape)
+
+print('y test: ', y_test.shape)
 
 #### Results
 
@@ -192,10 +235,13 @@ Hyperparameters
 
 # References
 
-- [1] “How Do Weather Events Impact Roads?”, 2018
+- [1] How do weather events impact roads? (2018). Federal Highway Administration. Retrieved from 
+https://ops.fhwa.dot.gov/weather/q1roadimpact.htm
 
 - [2] https://www.kaggle.com/sobhanmoosavi/us-accidents
 
 - [3] Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, and Rajiv Ramnath. “A Countrywide Traffic Accident Dataset.”, arXiv preprint arXiv:1906.05409 (2019).
 
 - [4] Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, Radu Teodorescu, and Rajiv Ramnath. “Accident Risk Prediction based on Heterogeneous Sparse Data: New Dataset and Insights.” In proceedings of the 27th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, ACM, 2019.
+
+- [5] Krishnaveni, S., & Hemalatha, M. (2011). A Perspective Analysis of Traffic Accident using Data Mining Techniques. International Journal of Computer Applications, 23(7), 40–48. doi: 10.5120/2896-3788
