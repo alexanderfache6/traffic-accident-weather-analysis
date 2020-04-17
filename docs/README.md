@@ -232,10 +232,13 @@ Hyperparameters
 
 # References
 
-- [1] “How Do Weather Events Impact Roads?”, 2018
+- [1] How do weather events impact roads? (2018). Federal Highway Administration. Retrieved from 
+https://ops.fhwa.dot.gov/weather/q1 roadimpact.htm
 
 - [2] https://www.kaggle.com/sobhanmoosavi/us-accidents
 
 - [3] Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, and Rajiv Ramnath. “A Countrywide Traffic Accident Dataset.”, arXiv preprint arXiv:1906.05409 (2019).
 
 - [4] Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, Radu Teodorescu, and Rajiv Ramnath. “Accident Risk Prediction based on Heterogeneous Sparse Data: New Dataset and Insights.” In proceedings of the 27th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, ACM, 2019.
+
+- [5] Krishnaveni, S., & Hemalatha, M. (2011). A Perspective Analysis of Traffic Accident using Data Mining Techniques. International Journal of Computer Applications, 23(7), 40–48. doi: 10.5120/2896-3788
