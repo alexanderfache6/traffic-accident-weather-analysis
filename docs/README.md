@@ -121,8 +121,11 @@ Logistic regression is a regression technique employed to fit accident systems. 
 Hyperparameters:
 
 X, y. The first parameter is the dataset that is being selected to use
+
 train_size. This parameter sets the size of the training dataset. 0.8 was used based on the ideal split 80:20 for training/testing
+
 test_size. This parameter specifies the size of the testing dataset. 0.2 was used based on the ideal split 80:20 for training/testing
+
 random_state. The default mode performs a random split using np.random. Was set to 0
 
 
