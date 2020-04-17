@@ -161,22 +161,25 @@ score_test = svm.score(X_test, y_test)
 
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/module2_data/GA/SupportVectorMachines/SVM_.png?token=AGCBXXSPGX2KQUD65FCI5YC6TTXY4 "C vs Gamma Accuracy")
 
-### Decision Trees
+### Gradient Boosting/Ensemble Learning using Decision Trees
 
 #### Description
 
-- 1-2 sentence description
+- Gradient boosting combines small decision trees (relatively weak estimators) through a gradient descent algorithm rather than creating a single decision tree in order to produce a classification strong model that is robust to overfitting. Sk-learn has been implementing an experimental approach to gradient boosting using histograms to bin data and speed up calculations. This is the implementation we used.
 
 #### Implementation
 
 Hyperparameters
 
-- describe
-- show key code lines
+- learning_rate
+- max_iter
+- max_leaf\_nodes
+- max_depth
 
 #### Results
 
-- images!!!
+##### Single Run:
+##### GridSearchCV (Hyperparameter optimization):
 
 # Conclusion
 
