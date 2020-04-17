@@ -126,6 +126,12 @@ Logistic regression is a regression technique employed to fit accident systems. 
 
 #### Implementation
 
+```
+too much. just highlight the important pieces. what is the sklearn function? how do you train it, get predictions?
+hyperparameters are the parameters you need to optimize for, not the "constants": regularization (C)
+```
+
+
 Hyperparameters:
 
 X, y: The first parameter is the dataset that is being selected to use
