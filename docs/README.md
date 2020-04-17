@@ -114,14 +114,37 @@ During preprocessing, the data set is first cleaned up. This means:
 
 #### Description
 
-- 1-2 sentence description
+Logistic regression is a regression technique employed to fit accident systems. Logistic regression techniques have been used to model probabilistic systems to predict future events. 
 
 #### Implementation
 
-Hyperparameters
+Hyperparameters:
 
-- describe
-- show key code lines
+X, y. The first parameter is the dataset that is being selected to use
+train_size. This parameter sets the size of the training dataset. 0.8 was used based on the ideal split 80:20 for training/testing
+test_size. This parameter specifies the size of the testing dataset. 0.2 was used based on the ideal split 80:20 for training/testing
+random_state. The default mode performs a random split using np.random. Was set to 0
+
+
+# Assign the data
+df=df_state_dummy
+
+# Set the target for the prediction
+target='Severity'
+
+
+# Create arrays for the features and the response variable
+
+# set X and y
+y = df[target]
+X = df.drop(target, axis=1)
+
+# Split the data set into training and testing data sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, train_size=0.80, random_state=0, shuffle=True)
+print('X train:', X_train.shape)
+print('y train:', y_train.shape)
+print('X test: ', X_test.shape)
+print('y test: ', y_test.shape)
 
 #### Results
 
