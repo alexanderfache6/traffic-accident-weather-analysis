@@ -126,20 +126,20 @@ test_size. This parameter specifies the size of the testing dataset. 0.2 was use
 random_state. The default mode performs a random split using np.random. Was set to 0
 
 
-# Assign the data
+#Assign the data
 df=df_state_dummy
 
-# Set the target for the prediction
+#Set the target for the prediction
 target='Severity'
 
 
-# Create arrays for the features and the response variable
+#Create arrays for the features and the response variable
 
-# set X and y
+#set X and y
 y = df[target]
 X = df.drop(target, axis=1)
 
-# Split the data set into training and testing data sets
+#Split the data set into training and testing data sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, train_size=0.80, random_state=0, shuffle=True)
 print('X train:', X_train.shape)
 print('y train:', y_train.shape)
