@@ -3,9 +3,13 @@ Note: This project is still in progress.
 https://mahdi-roozbahani.github.io/CS46417641-spring2020/other/Scoring%20scheme-guidance.pdf
 
 # Motivation
-In a 2019 Business Insider report, the city of Atlanta is reported to be ranked as number 11 on the most traffic congested cities in the United States [CITATION]. Unfortunately, thousands of Atlanta commuters are plagued with motor vehicle collisions every year in various traffic conditions. According to a published 2016 traffic report of Fulton County, Atlanta has faced an estimate of 60,984 automotive accidents with 12,875 injuries. One explanation for higher crash rates in Atlanta roads is that extreme road conditions due to weather (e.g. rain, snow, ice) create potential safety hazards. Such potential safety hazards include, but not limited to: driver(s) lose complete control of vehicle(s), improper lane change, or obstruction of visibility. The United States Department of Transportation Road Weather Management Program reports that annual averages from 2007-2016 show 15% of vehicle crashes occurred due to wet pavements with 10% due to rain, 4% due to snow, and 3% due to ice [1].
+In a 2008 crash analysis report, the state of Georgia had an estimate of 342,534 traffic accidents. Out of which, 133,555 individuals were injured and 1,703 were dead. On an average, Georgia faces around 1,000 traffic accidents per day.
 
-Eliminating weather conditions and associated factors is not possible, however, understanding relations between such conditions and crash risk could make drivers more aware of dangerous conditions. The following presents an analysis of US traffic accidents surveyed over the span of several years with the intention of developing a severity assessment model, ie. how do weather conditions impact crash damage. 
+One explanation for higher crash rates in Georgia roads is that extreme road conditions due to weather (e.g. rain, snow, ice) create potential safety hazards. Such potential safety hazards include, but not limited to: driver(s) lose complete control of vehicle(s), improper lane change, or obstruction of visibility. 
+The United States Department of Transportation Road Weather Management Program reports that annual averages from 2007-2016 show 15% of vehicle crashes occurred due to wet pavements with 10% due to rain, 4% due to snow, and 3% due to ice [1].
+
+Eliminating weather conditions and associated factors is not possible, however, understanding relations between such conditions and crash risk could make drivers more aware of dangerous conditions. The following presents an analysis of US traffic accidents surveyed over the span of several years with the intention of developing a severity assessment model, ie. How do weather conditions impact crash damage?
+
 
 ````
 - was the motivation clear? X
@@ -72,10 +76,14 @@ corresponds to Severity 1, 2, 3, 4.
 # Approach
 
 ## What are you trying to do to tackle with your project motivation or problem?
-By implementing a real-time updating machine learning model fed with informative data, users (drivers) can explore the most dangerous locations along their commutes during extreme weather conditions to either avoid or take extra precautions. As more and more Atlanta drivers become aware of road conditions along their respective routes, there could be a significant reduction in the number of automotive accidents, injuries, and fatalities. Our team has developed a risk assessment for regions that drivers can use to evaluate driving conditions and take necessary precautions.
+As more and more Georgia drivers become aware of road conditions along their respective routes, there could be a significant reduction in the number of automotive accidents, injuries, and fatalities. Our team has used several predictive models to determine severity (from a scale of 1-4) for exclusively the roads in Georgia that can be used to evaluate driving conditions and take necessary precautions. 
 
 ## What have people already done?
-We have used relevant features such as precipitation, weather condition, time of day, road type, severity and so forth to calculate risk scores along Atlanta roads. WILL COME BACK TO THIS AFTER GROUP DISCUSSION MEETING
+In the study “A Perspective Analysis of Traffic Accidents using Data Mining Techniques” by S. Krishnaveni and Dr. Hemalatha, the researchers explored Naive Bayes Bayesian classifier, AdaBoostM1 Meta classifier, Random Forest Tree classifier, and PART Rule classifier to predict injury severity caused by traffic accidents in Hong Kong. The research collected data based on accident (severity, weather, type of collision, road classification), vehicle (driver age, gender, manufacture date) , and causality (location of casualty, degree of injury). As a result of this study, the Random Forest predictive model outperformed the other three models.
+
+In our study, we have used relevant features such as severity, precipitation, weather condition, time of day, road type, severity and so forth to predict severity along Georgia roads. We used Principle Component Analysis as our dimension reduction technique on our dataset. Moreover, we have implemented Logistic Regression, Support Vector Machine, and Decision Tree classification models to see which model can predict severity most accurately.
+
+By implementing a predictive machine learning model fed with informative data, Georgia users (drivers) can explore the most dangerous locations along their commutes during extreme weather conditions to either avoid or take extra precautions. Our study can also be extended to locations beyond Georgia, but for short, we focused on this specific state to explore with.
 
 ````
 - Why do you think your approach can effectively solve your problem?
