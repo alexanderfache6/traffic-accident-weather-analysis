@@ -212,17 +212,48 @@ score_test = svm.score(X_test, y_test)
 
 #### Implementation
 
-Hyperparameters
+Hyperparameters:
 
 - learning_rate
 - max_iter
 - max_leaf\_nodes
+- min_samples\_leaf
 - max_depth
 
 #### Results
+Results were first obtained with single iterations and some manual tuning of parameters. Further hyperparameter tuning was performed implementing sklearn.model_selection.GridSearchCV.
+Results shown (for comparing both training and test sets to their respective ground truths): 
+
+- Confusion Matrices
+- Accuracy Score
+- Prediction Score (for each individual label)
+- F1 Score (for each individual label)
+
 
 ##### Single Run:
+Hyperparameters for results shown:
+
+- learning_rate: 0.1
+- max_iter: 100
+- max_leaf\_nodes: default=20
+- min_samples\_leaf: 50
+- max_depth: 8
+
+Results:
+![Single Run Results]
+
 ##### GridSearchCV (Hyperparameter optimization):
+Search Space explored:
+
+- learning_rate: [0.05, 0.1, 0.15, 0.2]
+- max_iter: [100, 500, 1000]
+- max_leaf\_nodes: default=20
+- min_samples\_leaf: [30, 50, 100]
+- max_depth: [5, 6, 7, 8]
+
+Due to time constaints, max leaf nodes was kept at default setting.
+
+Results:
 
 # Conclusion
 
