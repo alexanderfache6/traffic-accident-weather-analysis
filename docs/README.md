@@ -8,12 +8,6 @@ Eliminating weather conditions and associated factors is not possible, however, 
 
 # Dataset
 
-````
-- Were the dataset and approach used effectively?
-- How did you get your dataset? X
-- What are its characteristics (e.g. number of features, # of records, temporal or not, etc.) X
-````
-
 ## [US Accidents](https://www.kaggle.com/sobhanmoosavi/us-accidents) 
 
 The dataset used for this project was found on Kaggle and put together by [3]-[4]. It contains 3.0 million records of spatial-temporal traffic accidents across 49 US states from February 2016 to December 2019. Among these records, variables such as time of day, latitute/longitude, weather conditions, road features were collected. This section summarizes the dataset's features and provides additional insight to its organization.
