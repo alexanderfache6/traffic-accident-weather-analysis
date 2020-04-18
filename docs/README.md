@@ -94,7 +94,7 @@ By implementing a predictive machine learning model fed with informative data, G
 During preprocessing, the data set is first cleaned up. This means:
 
   - filling in missing categorical data with the mode of that feature
-  - filling in missing numerical data with the medaian of that feature
+  - filling in missing numerical data with the median of that feature
   - cleaning up date time objects by splitting into year, month, day, hour, minute, second attributes
   - replace True/False data with 1/0
   - apply one-hot encoding for categorical data
@@ -167,7 +167,7 @@ Hyperparameters
 Parameters
 
 - kernel (kernel type)
-  - 'rbf' (radial based function)
+  - 'rbf' (radial basis function)
 
 ```
 from sklearn.svm import SVC
