@@ -6,12 +6,6 @@ The United States Department of Transportation Road Weather Management Program r
 
 Eliminating weather conditions and associated factors is not possible, however, understanding relations between such conditions and crash risk could make drivers more aware of dangerous conditions. The following presents an analysis of US traffic accidents surveyed over the span of several years with the intention of developing a severity assessment model, ie. How do weather conditions impact crash damage?
 
-````
-- was the motivation clear? X
-- what is the problem? X
-- why is it important and why we should care? X
-````
-
 # Dataset
 
 ````
@@ -47,6 +41,7 @@ Several of the features have incomplete values or categorical values and will ne
 First we consider the distribution of samples across the entire dataset noting the following color map to indicate the four levels of crash severity that will be used as our supervised labels:
 
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/colormap.png?token=AGCBXXSWIDCCJZZ2YP5I3VK6USVVU "Severity Color")
+
 corresponds to Severity 1, 2, 3, 4.
 
 - Distribution of severity samples across the continental US.
@@ -80,16 +75,9 @@ In our study, we have used relevant features such as severity, precipitation, we
 
 By implementing a predictive machine learning model fed with informative data, Georgia users (drivers) can explore the most dangerous locations along their commutes during extreme weather conditions to either avoid or take extra precautions. Our study can also be extended to locations beyond Georgia, but for short, we focused on this specific state to explore with.
 
-````
-- Why do you think your approach can effectively solve your problem?
-- What is new in your approach?
-````
+## Preprocessing
 
-# Modules
-
-## 1 Feature Extraction, Dimensionality Reduction, Feature Ranking
-
-### Preprocessing
+### Feature Extraction, Dimensionality Reduction
 
 During preprocessing, the data set is first cleaned up. This means:
 
@@ -114,7 +102,7 @@ During preprocessing, the data set is first cleaned up. This means:
 - The original correlation is removed after performing PCA. This is confirmed by the diagonal line in the resulting correlation analysis indicating the selected principal components are orthogonal to one another and thereby linearly independent (ie. not correlated).
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/module1_data/GA/correlation_pca.png?token=AGCBXXRRDJJF4FBFJPOXJ526USV3M "PCA Correlation")
 
-## 2 Supervised Learning
+## Methods
 
 ### Logistic Regression
 
@@ -123,12 +111,6 @@ During preprocessing, the data set is first cleaned up. This means:
 Logistic regression is a regression technique employed to fit accident systems. Logistic regression techniques have been used to model probabilistic systems to predict future events. 
 
 #### Implementation
-
-```
-too much. just highlight the important pieces. what is the sklearn function? how do you train it, get predictions?
-hyperparameters are the parameters you need to optimize for, not the "constants": regularization (C)
-```
-
 
 Hyperparameters:
 
@@ -250,13 +232,6 @@ Overall, the project found some promise in its approach, but it is clear that pe
 Gradient boosting is designed as a powerful combination of weak estimators that creates a model not as susceptible to overfitting as a standard decision tree. In this case, we can observe this through the relatively comparable accuracy, precision and F1 scores for training and test data. However, these scores remain fairly low. While some of these metrics tend to be harsh when looking at multilabel classification, the underlying bias of the traffic dataset towards severity 1 and 2 crashes (as well as an almost negligible amount of severity 0 scores) is a likely cause of the relatively low scoring metrics.
 
 Further steps to improve the algorithm would include more directed hyperparameter tuning with a larger search space, as well as looking for ways to mitigate the skew of data (perhaps through stratified random sampling when constructing the training set to get more even numbers for each sample), and perhaps removing severity 0 traffic accidents entirely.
-
-```
-- Were the experiments, results, and conclusion satisfactory?
-- How did you evaluate your approach?
-- What are the results?
-- How do you compare your method to other methods?
-````
 
 # References
 
