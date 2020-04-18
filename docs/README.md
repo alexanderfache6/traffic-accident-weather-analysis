@@ -69,9 +69,9 @@ In our study, we have used relevant features such as severity, precipitation, we
 
 By implementing a predictive machine learning model fed with informative data, Georgia users (drivers) can explore the most dangerous locations along their commutes during extreme weather conditions to either avoid or take extra precautions. Our study can also be extended to locations beyond Georgia, but for short, we focused on this specific state to explore with.
 
-## Preprocessing
+# Preprocessing
 
-### Feature Extraction, Dimensionality Reduction
+## Feature Extraction, Dimensionality Reduction
 
 During preprocessing, the data set is first cleaned up. This means:
 
@@ -82,7 +82,7 @@ During preprocessing, the data set is first cleaned up. This means:
   - apply one-hot encoding for categorical data
     - ex. Sunrise_Sunset = {Day, Night}. Turn into Sunrise_Sunset_Day = {True, False}, Sunrise_Sunset_Night = {True, False}
 
-### Principle Component Analysis (PCA)
+## Principle Component Analysis (PCA)
 
 - Aims to select principal components in Z space to attain the largest possible variance.
 - Reduces dimensionality of data thereby reducing complexity.
@@ -96,15 +96,15 @@ During preprocessing, the data set is first cleaned up. This means:
 - The original correlation is removed after performing PCA. This is confirmed by the diagonal line in the resulting correlation analysis indicating the selected principal components are orthogonal to one another and thereby linearly independent (ie. not correlated).
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/module1_data/GA/correlation_pca.png?token=AGCBXXRRDJJF4FBFJPOXJ526USV3M "PCA Correlation")
 
-## Methods
+# Methods
 
-### Logistic Regression
+## Logistic Regression
 
-#### Description
+### Description
 
 Logistic regression is a regression technique employed to fit accident systems. Logistic regression techniques have been used to model probabilistic systems to predict future events. 
 
-#### Implementation
+### Implementation
 
 Hyperparameters:
 
@@ -119,19 +119,20 @@ Hyperparameters:
 -Max iter : max_iter represents maximum number of iterations taken for the solvers to converge a training process.
 
 
-#### Results
+### Results
 
 Accuracy score = .527
 ![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/Values%20vs%20Predictions.png)
 
+### Discussion
 
-### Support Vector Machine (SVM)
+## Support Vector Machine (SVM)
 
-#### Description
+### Description
 
 SVM maps data into a high dimension space so that decision boundaries can distinguish between the different classes.
 
-#### Implementation
+### Implementation
 
 Hyperparameters
 
@@ -154,19 +155,22 @@ score_train = svm.score(X_train, y_train)
 score_test = svm.score(X_test, y_test)
 ```
 
-#### Results
+### Results
 
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/module2_data/GA/SupportVectorMachines/SVM_.png?token=AGCBXXSPGX2KQUD65FCI5YC6TTXY4 "C vs Gamma Accuracy")
 
 SVM struggled to fit onto the test after performing well on the training set, with 0.9997 and 0.479 accuracy respectively. An issue that was further researched is that SVM tends to work best for datasets consisting of fewer than 10,000 features. Our training and test sets were both greater and therefore may have caused intense overfitting due to an inappropriate selection of the number of support vectors.
 
-### Gradient Boosting/Ensemble Learning using Decision Trees
+### Discussion
 
-#### Description
+
+## Gradient Boosting/Ensemble Learning using Decision Trees
+
+### Description
 
 Gradient boosting combines small decision trees (relatively weak estimators) through a gradient descent algorithm rather than creating a single decision tree in order to produce a classification strong model that is robust to overfitting. Sk-learn has been implementing an experimental approach to gradient boosting using histograms to bin data and speed up calculations. This is the implementation we used.
 
-#### Implementation
+### Implementation
 
 Hyperparameters:
 
@@ -178,7 +182,8 @@ Hyperparameters:
 - max_depth
 ```
 
-#### Results
+### Results
+
 Results were first obtained with single iterations and some manual tuning of parameters. Further hyperparameter tuning was performed implementing sklearn.model_selection.GridSearchCV.
 Results shown (for comparing both training and test sets to their respective ground truths): 
 
@@ -187,7 +192,7 @@ Results shown (for comparing both training and test sets to their respective gro
 - Prediction Score (for each individual label)
 - F1 Score (for each individual label)
 
-##### Single Run:
+#### Single Run:
 Hyperparameters for results shown:
 
 - learning_rate: 0.1
@@ -200,7 +205,7 @@ Results:
 
 ![Single Run Results](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/Decision_singlerun.png?token=AKF5GLTSWS4H5L6R46EQRQC6UR45K)
 
-##### GridSearchCV (Hyperparameter optimization):
+#### GridSearchCV (Hyperparameter optimization):
 Search Space explored:
 
 - learning_rate: [0.05, 0.1, 0.15, 0.2]
@@ -215,17 +220,15 @@ Results:
 
 ![Grid Search Best Results](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/Decision_gridsearch.png?token=AKF5GLSHBLKXYELRFW5QZ6S6UR5IM)
 
-# Conclusion/Discussion
-
-##### Overall Discussion
-
-Overall, the project found some promise in its approach, but it is clear that perhaps more preprocessing or a different dataset is needed. Severity scores for traffic accidents were heavily skewed towards scores of either 1 or 2, which may have led to significant decreases in scoring metrics across all algorithms tested. However, each algorithm will be discussed and assessed on its own as well as compared/evaluated at the end of the discussion.
-
-##### Gradient Boosting/Decision Trees
+### Discussion
 
 Gradient boosting is designed as a powerful combination of weak estimators that creates a model not as susceptible to overfitting as a standard decision tree. In this case, we can observe this through the relatively comparable accuracy, precision and F1 scores for training and test data. However, these scores remain fairly low. While some of these metrics tend to be harsh when looking at multilabel classification, the underlying bias of the traffic dataset towards severity 1 and 2 crashes (as well as an almost negligible amount of severity 0 scores) is a likely cause of the relatively low scoring metrics.
 
 Further steps to improve the algorithm would include more directed hyperparameter tuning with a larger search space, as well as looking for ways to mitigate the skew of data (perhaps through stratified random sampling when constructing the training set to get more even numbers for each sample), and perhaps removing severity 0 traffic accidents entirely.
+
+# Conclusion
+
+Overall, the project found some promise in its approach, but it is clear that perhaps more preprocessing or a different dataset is needed. Severity scores for traffic accidents were heavily skewed towards scores of either 1 or 2, which may have led to significant decreases in scoring metrics across all algorithms tested. However, each algorithm will be discussed and assessed on its own as well as compared/evaluated at the end of the discussion.
 
 # References
 
