@@ -132,46 +132,20 @@ hyperparameters are the parameters you need to optimize for, not the "constants"
 
 Hyperparameters:
 
-X, y: The first parameter is the dataset that is being selected to use
+-Penalty: Specifies the type of normalization used. The default value is l2.
 
-train_size: This parameter sets the size of the training dataset. 0.8 was used based on the ideal split 80:20 for training/testing
+-Inverse of regularization(C): Smaller values of this hyper-parameter indicates a stronger regularization. Default value is 1.0
 
-test_size: This parameter specifies the size of the testing dataset. 0.2 was used based on the ideal split 80:20 for training/testing
+-Random state : Seed used by the random number generator. Default value is None.
 
-random_state: The default mode performs a random split using np.random. Was set to 0
+-Solver: Indicates which algorithm to use in the optimization problem. Default value is lbfgs.
 
+-Max iter : max_iter represents maximum number of iterations taken for the solvers to converge a training process.
 
-#Assign the data:
-
-df=df_state_dummy
-
-#Set the target for the prediction:
-
-target='Severity'
-
-
-#Create arrays for the features and the response variable:
-
-#set X and y:
-
-y = df[target]
-
-X = df.drop(target, axis=1)
-
-#Split the data set into training and testing data sets:
-
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, train_size=0.80, random_state=0, shuffle=True)
-
-print('X train:', X_train.shape)
-
-print('y train:', y_train.shape)
-
-print('X test: ', X_test.shape)
-
-print('y test: ', y_test.shape)
 
 #### Results
 
+Accuracy score = .527
 ![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/Values%20vs%20Predictions.png)
 
 
