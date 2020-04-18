@@ -172,7 +172,8 @@ print('y test: ', y_test.shape)
 
 #### Results
 
-- images!!!
+![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/Values%20vs%20Predictions.png)
+
 
 ### Support Vector Machine (SVM)
 
