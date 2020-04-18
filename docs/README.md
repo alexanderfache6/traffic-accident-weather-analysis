@@ -246,6 +246,7 @@ Hyperparameters for results shown:
 - max_depth: 8
 
 Results:
+
 ![Single Run Results](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/Decision_singlerun.png?token=AKF5GLTSWS4H5L6R46EQRQC6UR45K)
 
 ##### GridSearchCV (Hyperparameter optimization):
@@ -261,7 +262,20 @@ Due to time constaints, max leaf nodes was kept at default setting.
 
 Results:
 
-# Conclusion
+![Grid Search Best Results](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/Decision_gridsearch.png?token=AKF5GLSHBLKXYELRFW5QZ6S6UR5IM)
+
+
+# Conclusion/Discussion
+
+##### Overall Discussion
+
+Overall, the project found some promise in its approach, but it is clear that perhaps more preprocessing or a different dataset is needed. Severity scores for traffic accidents were heavily skewed towards scores of either 1 or 2, which may have led to significant decreases in scoring metrics across all algorithms tested. However, each algorithm will be discussed and assessed on its own as well as compared/evaluated at the end of the discussion.
+
+##### Gradient Boosting/Decision Trees
+
+Gradient boosting is designed as a powerful combination of weak estimators that creates a model not as susceptible to overfitting as a standard decision tree. In this case, we can observe this through the relatively comparable accuracy, precision and F1 scores for training and test data. However, these scores remain fairly low. While some of these metrics tend to be harsh when looking at multilabel classification, the underlying bias of the traffic dataset towards severity 1 and 2 crashes (as well as an almost negligible amount of severity 0 scores) is a likely cause of the relatively low scoring metrics.
+
+Further steps to improve the algorithm would include more directed hyperparameter tuning with a larger search space, as well as looking for ways to mitigate the skew of data (perhaps through stratified random sampling when constructing the training set to get more even numbers for each sample), and perhaps removing severity 0 traffic accidents entirely.
 
 ```
 - Were the experiments, results, and conclusion satisfactory?
