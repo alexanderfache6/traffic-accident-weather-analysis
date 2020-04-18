@@ -1,7 +1,3 @@
-Note: This project is still in progress.
-
-https://mahdi-roozbahani.github.io/CS46417641-spring2020/other/Scoring%20scheme-guidance.pdf
-
 # Motivation
 In a 2008 crash analysis report, the state of Georgia had an estimate of 342,534 traffic accidents. Out of which, 133,555 individuals were injured and 1,703 were dead. On an average, Georgia faces around 1,000 traffic accidents per day.
 
@@ -9,7 +5,6 @@ One explanation for higher crash rates in Georgia roads is that extreme road con
 The United States Department of Transportation Road Weather Management Program reports that annual averages from 2007-2016 show 15% of vehicle crashes occurred due to wet pavements with 10% due to rain, 4% due to snow, and 3% due to ice [1].
 
 Eliminating weather conditions and associated factors is not possible, however, understanding relations between such conditions and crash risk could make drivers more aware of dangerous conditions. The following presents an analysis of US traffic accidents surveyed over the span of several years with the intention of developing a severity assessment model, ie. How do weather conditions impact crash damage?
-
 
 ````
 - was the motivation clear? X
@@ -51,27 +46,27 @@ Several of the features have incomplete values or categorical values and will ne
 
 First we consider the distribution of samples across the entire dataset noting the following color map to indicate the four levels of crash severity that will be used as our supervised labels:
 
-![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/colormap.png?token=AGCBXXWRWQFSQK6CDVVVR5S6TNUNM "Severity Color")
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/colormap.png?token=AGCBXXSWIDCCJZZ2YP5I3VK6USVVU "Severity Color")
 corresponds to Severity 1, 2, 3, 4.
 
 - Distribution of severity samples across the continental US.
-![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/map_usa.png?token=AGCBXXR5JQCTMUPC43ZJ3AS6TNULW "Map of US Accidents")
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/map_usa.png?token=AGCBXXVTJESKAO74VIUBBGS6USVWU "Map of US Accidents")
 
 - Crash occurance among each severity category. The frequency of the four levels of severity will play an important role in our analysis.
 
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/us_histogram.png?token=AGCBXXQL3CCHTMVH6YP7KH26TZAXY "Frequency of Severity in US")
 
 - As well as the accident occurance for each state.
-![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/accidents_per_state.png?token=AGCBXXQBYLPFREZ3FDQZ7BC6TZATM "Accident Counts for all States")
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/accidents_per_state.png?token=AGCBXXXYVDOT22PROW2EHVC6USVTO "Accident Counts for all States")
 
 ### Georgia
 
 - Distribution of severity samples across the state of Georgia.
-![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/GA.png?token=AGCBXXSWMABYG3ZU767G5OS6TNUCY "Map of GA Accidents")
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/GA.png?token=AGCBXXUHAPRSODNNXTHI3326USVPY "Map of GA Accidents")
 
 - Crash occurance among each severity category.
 
-![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/ga_histogram.png?token=AGCBXXVQ4BSPAE3CYC2KFNS6TZAVC "Frequency of Severity in GA")
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/ga_histogram.png?token=AGCBXXRC3OGJQ5VIS6UZFHK6USVRM "Frequency of Severity in GA")
 
 # Approach
 
@@ -111,10 +106,13 @@ During preprocessing, the data set is first cleaned up. This means:
 - Reduces dimensionality of data thereby reducing complexity.
 
 - For the original data set, each feature has some correlation/dependency on other features.
-![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/module1_data/GA/correlation_original.png?token=AGCBXXQBKWDUN7AHONNL5IK6TNUPK "Original Correlation")
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/module1_data/GA/correlation_original.png?token=AGCBXXVF7VUQRYKHOR5HIG26USV2O "Original Correlation")
+
+- Applying PCA with 97% recovered variance resulted in the top 49 principal components.
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/module1_data/GA/pca_f194.png?token=AGCBXXQKFMBSBTXX6G6UU2C6USW26 "PCA scree plot")
 
 - The original correlation is removed after performing PCA. This is confirmed by the diagonal line in the resulting correlation analysis indicating the selected principal components are orthogonal to one another and thereby linearly independent (ie. not correlated).
-![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/module1_data/GA/correlation_pca.png?token=AGCBXXTXJNVRX6J2XDXBAUK6TNUQK "PCA Correlation")
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/module1_data/GA/correlation_pca.png?token=AGCBXXRRDJJF4FBFJPOXJ526USV3M "PCA Correlation")
 
 ## 2 Supervised Learning
 
@@ -134,16 +132,43 @@ hyperparameters are the parameters you need to optimize for, not the "constants"
 
 Hyperparameters:
 
--Penalty: Used to specify the type of normalization used.  Few of the values for this hyper-parameter can be l1, l2 or none. The default value is l2.
+X, y: The first parameter is the dataset that is being selected to use
 
--Inverse of regularization (C):Smaller values of this hyper-parameter indicates a stronger regularization. Default value is 1.0
+train_size: This parameter sets the size of the training dataset. 0.8 was used based on the ideal split 80:20 for training/testing
 
--Random state : random_state is the seed used by the random number generator. Default value is None.
+test_size: This parameter specifies the size of the testing dataset. 0.2 was used based on the ideal split 80:20 for training/testing
 
--Solver: This indicates which algorithm to use in the optimization problem. Default value is lbfgs. 
+random_state: The default mode performs a random split using np.random. Was set to 0
 
--Max iter: Maximum number of iterations taken for the solvers to converge a training process.
 
+#Assign the data:
+
+df=df_state_dummy
+
+#Set the target for the prediction:
+
+target='Severity'
+
+
+#Create arrays for the features and the response variable:
+
+#set X and y:
+
+y = df[target]
+
+X = df.drop(target, axis=1)
+
+#Split the data set into training and testing data sets:
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, train_size=0.80, random_state=0, shuffle=True)
+
+print('X train:', X_train.shape)
+
+print('y train:', y_train.shape)
+
+print('X test: ', X_test.shape)
+
+print('y test: ', y_test.shape)
 
 #### Results
 
@@ -160,15 +185,14 @@ SVM maps data into a high dimension space so that decision boundaries can distin
 Hyperparameters
 
 - C (regularization)
-  - ...
+  - 100
 - <a href="https://www.codecogs.com/eqnedit.php?latex=\gamma" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\gamma" title="\gamma" /></a> (kernel coefficient)
-  - ...
+  - 1
 
 Parameters
 
 - kernel (kernel type)
   - 'rbf' (radial based function)
-
 
 ```
 from sklearn.svm import SVC
@@ -183,21 +207,25 @@ score_test = svm.score(X_test, y_test)
 
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/module2_data/GA/SupportVectorMachines/SVM_.png?token=AGCBXXSPGX2KQUD65FCI5YC6TTXY4 "C vs Gamma Accuracy")
 
+SVM struggled to fit onto the test after performing well on the training set, with 0.9997 and 0.479 accuracy respectively. An issue that was further researched is that SVM tends to work best for datasets consisting of fewer than 10,000 features. Our training and test sets were both greater and therefore may have caused intense overfitting due to an inappropriate selection of the number of support vectors.
+
 ### Gradient Boosting/Ensemble Learning using Decision Trees
 
 #### Description
 
-- Gradient boosting combines small decision trees (relatively weak estimators) through a gradient descent algorithm rather than creating a single decision tree in order to produce a classification strong model that is robust to overfitting. Sk-learn has been implementing an experimental approach to gradient boosting using histograms to bin data and speed up calculations. This is the implementation we used.
+Gradient boosting combines small decision trees (relatively weak estimators) through a gradient descent algorithm rather than creating a single decision tree in order to produce a classification strong model that is robust to overfitting. Sk-learn has been implementing an experimental approach to gradient boosting using histograms to bin data and speed up calculations. This is the implementation we used.
 
 #### Implementation
 
 Hyperparameters:
 
+```
 - learning_rate
 - max_iter
 - max_leaf\_nodes
 - min_samples\_leaf
 - max_depth
+```
 
 #### Results
 Results were first obtained with single iterations and some manual tuning of parameters. Further hyperparameter tuning was performed implementing sklearn.model_selection.GridSearchCV.
@@ -207,7 +235,6 @@ Results shown (for comparing both training and test sets to their respective gro
 - Accuracy Score
 - Prediction Score (for each individual label)
 - F1 Score (for each individual label)
-
 
 ##### Single Run:
 Hyperparameters for results shown:
@@ -236,7 +263,6 @@ Due to time constaints, max leaf nodes was kept at default setting.
 Results:
 
 ![Grid Search Best Results](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/Decision_gridsearch.png?token=AKF5GLSHBLKXYELRFW5QZ6S6UR5IM)
-
 
 # Conclusion/Discussion
 
