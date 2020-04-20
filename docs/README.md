@@ -102,21 +102,21 @@ During preprocessing, the data set is first cleaned up. This means:
 
 ### Description
 
-Logistic regression is a regression technique employed to fit accident systems. Logistic regression techniques have been used to model probabilistic systems to predict future events. 
+Logistic regression in its basic form uses a logistic function to model a binary dependent variable. However, this algorithm can also be extended to model several classes of events.
 
 ### Implementation
 
 Hyperparameters
 
-- Penalty: Specifies the type of normalization used. The default value is l2.
+- Penalty: Specifies the type of normalization used. The default value l2 was used.
 
-- Inverse of regularization(C): Smaller values of this hyper-parameter indicates a stronger regularization. Default value is 1.0
+- Inverse of regularization(C): Smaller values of this hyper-parameter indicates a stronger regularization. 1.0 was chosen based on literature and numerous trials.
 
-- Random state: Seed used by the random number generator. Default value is None.
+- Random state: Seed used by the random number generator. Default value of None was used.
 
-- Solver: Indicates which algorithm to use in the optimization problem. Default value is lbfgs.
+- Solver: Indicates which algorithm to use in the optimization problem. Default value of lbfgs was used.
 
-- Max iter: max_iter represents maximum number of iterations taken for the solvers to converge a training process.
+- Max iter: max_iter represents maximum number of iterations taken for the solvers to converge a training process. A value of 1000 was chosen.
 
 ### Results
 
@@ -125,7 +125,7 @@ Accuracy score = 0.527
 
 ### Discussion
 
-Logistic regression will not perform well with variables that are very similar or correlated to each other. The presence of certain attributes that are similar and correlated to each other could've caused this algorithm to not perform as well.
+For a multi-class problem such as this one, the sigmoid function is replaced by the softmax function. The softmax function tends to exaggerate small differences, potentially making the classifier biased towards a particular class even when it is not desired. Moreover, logistic regression does not perform well with variables that are very similar or correlated to each other. The presence of certain attributes that are similar and correlated to each other could've also caused this algorithm to not perform as well. 
 
 ## Support Vector Machine (SVM)
 
