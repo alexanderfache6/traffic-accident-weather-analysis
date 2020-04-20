@@ -1,16 +1,15 @@
 # Motivation
-In a 2008 crash analysis report, the state of Georgia had an estimate of 342,534 traffic accidents. Out of which, 133,555 individuals were injured and 1,703 were dead. On an average, Georgia faces around 1,000 traffic accidents per day.
+In a 2008 crash analysis report, the state of Georgia had an estimate of 342,534 traffic accidents. Out of which, 133,555 individuals were injured, and 1,703 were dead. On average, Georgia faces around 1,000 traffic accidents per day.
 
-One explanation for higher crash rates in Georgia roads is that extreme road conditions due to weather (e.g. rain, snow, ice) create potential safety hazards. Such potential safety hazards include, but not limited to: driver(s) lose complete control of vehicle(s), improper lane change, or obstruction of visibility. 
-The United States Department of Transportation Road Weather Management Program reports that annual averages from 2007-2016 show 15% of vehicle crashes occurred due to wet pavements with 10% due to rain, 4% due to snow, and 3% due to ice [1].
+One explanation for higher crash rates on Georgia roads is that extreme road conditions due to weather (e.g. rain, snow, ice) create potential safety hazards. Such potential safety hazards include, but are not limited to: driver(s) losing complete control of vehicle(s), improper lane changes, or obstruction of visibility. The United States Department of Transportation Road Weather Management Program reports that annual averages from 2007-2016 show 15% of vehicle crashes occurred due to wet pavements, 10% due to rain, 4% due to snow, and 3% due to ice [1].
 
-Eliminating weather conditions and associated factors is not possible, however, understanding relations between such conditions and crash risk could make drivers more aware of dangerous conditions. The following presents an analysis of US traffic accidents surveyed over the span of several years with the intention of developing a severity assessment model, ie. How do weather conditions impact crash damage?
+Eliminating weather conditions and associated factors is not possible, however, understanding relations between conditions and crash risks could make drivers more aware of dangerous conditions. The following document presents an analysis of US traffic accidents surveyed over the span of several years with the intention of developing a severity assessment model, ie. How do weather conditions impact vehicle crash damage?
 
 # Dataset
 
 ## [US Accidents](https://www.kaggle.com/sobhanmoosavi/us-accidents) 
 
-The dataset used for this project was found on Kaggle and put together by [3]-[4]. It contains 3.0 million records of spatial-temporal traffic accidents across 49 US states from February 2016 to December 2019. Among these records, variables such as time of day, latitute/longitude, weather conditions, road features were collected. This section summarizes the dataset's features and provides additional insight to its organization.
+The dataset used for this project was found on Kaggle and put together by [2]-[4]. It contains 3.0 million records of spatial-temporal traffic accidents across 49 US states from February 2016 to December 2019. Among these records, variables such as time of day, latitute/longitude, weather conditions, road features were collected. This section summarizes the dataset's features and provides additional insight to its organization.
 
 ### Features
 
@@ -36,38 +35,37 @@ First we consider the distribution of samples across the entire dataset noting t
 
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/colormap.png?token=AGCBXXSWIDCCJZZ2YP5I3VK6USVVU "Severity Color")
 
-corresponds to Severity 1, 2, 3, 4.
+corresponding to a Severity of 1, 2, 3, and 4.
 
-- Distribution of severity samples across the continental US.
+- This map indicated the distribution of severity samples across the continental US.
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/map_usa.png?token=AGCBXXVTJESKAO74VIUBBGS6USVWU "Map of US Accidents")
 
-- Crash occurance among each severity category. The frequency of the four levels of severity will play an important role in our analysis.
+- The below histogram shows the crash occurance among each severity category. The imbalance in frequency among all four levels of severity will play an important role in our analysis.
 
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/us_histogram.png?token=AGCBXXQL3CCHTMVH6YP7KH26TZAXY "Frequency of Severity in US")
 
-- As well as the accident occurance for each state.
+- Additionally, the total quantity of accidents for each state is recorded.
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/accidents_per_state.png?token=AGCBXXXYVDOT22PROW2EHVC6USVTO "Accident Counts for all States")
 
 ### Georgia
 
-- Distribution of severity samples across the state of Georgia.
+- This map indicated the distribution of severity samples across the state of Georgia.
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/GA.png?token=AGCBXXUHAPRSODNNXTHI3326USVPY "Map of GA Accidents")
 
-- Crash occurance among each severity category.
-
+- The below histogram shows the crash occurance among each severity category.
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/moduleX_data/GA/ga_histogram.png?token=AGCBXXRC3OGJQ5VIS6UZFHK6USVRM "Frequency of Severity in GA")
 
 # Approach
 
 ## What are you trying to do to tackle with your project motivation or problem?
-As more and more Georgia drivers become aware of road conditions along their respective routes, there could be a significant reduction in the number of automotive accidents, injuries, and fatalities. Our team has used several predictive models to assess severity (from a scale of 1-4) for exclusively the roads in Georgia that can be used to evaluate driving conditions and take necessary precautions. 
+As more and more Georgia drivers become aware of road conditions along their respective routes, there could be a significant reduction in the number of automotive accidents, injuries, and fatalities. Several predictive models are used to assess severity on Georgia roads that can be used to evaluate driving conditions in order to take necessary precautions.
 
 ## What have people already done?
-In the study “A Perspective Analysis of Traffic Accidents using Data Mining Techniques” by S. Krishnaveni and Dr. Hemalatha, the researchers explored Naive Bayesian classifier, AdaBoostM1 Meta classifier, Random Forest Tree classifier, and PART Rule classifier to predict injury severity caused by traffic accidents in Hong Kong [5]. The research collected data based on accident (severity, weather, type of collision, road classification), vehicle (driver age, gender, manufacture date) , and casualty (location of casualty, degree of injury). As a result of this study, the Random Forest predictive model outperformed the other three models.
+In the study “A Perspective Analysis of Traffic Accidents using Data Mining Techniques” by S. Krishnaveni and Dr. Hemalatha, the researchers explored Naive Bayesian classifier, AdaBoostM1 Meta classifier, Random Forest Tree classifier, and PART Rule classifier to predict injury severity caused by traffic accidents in Hong Kong [5]. The research collected data based on accident (severity, weather, type of collision, road classification), vehicle (driver age, gender, manufacture date), and casualty (location of crash, degree of injury). As a result of this study, the Random Forest predictive model outperformed the other three models.
 
-In our study, we have used relevant features such as severity, precipitation, weather condition, time of day, road type, and so forth to assess severity along Georgia roads. We used Principle Component Analysis as our dimension reduction technique on our dataset. Moreover, we have implemented Logistic Regression, Support Vector Machine, and Decision Tree classification models to see which model can predict severity most accurately.
+In our study, we have used relevant features such as weather conditions, time of day, and road layout to assess severity along Georgia roads. We first used Principle Component Analysis for dimensionality reduction then implemented Logistic Regression, Support Vector Machine, and Decision Tree classification models to see which model can best represent the datasets.
 
-By implementing a predictive machine learning model fed with informative data, Georgia users (drivers) can explore the most dangerous locations along their commutes during extreme weather conditions to either avoid or take extra precautions. Our study can also be extended to locations beyond Georgia, but for short, we focused on this specific state to explore with.
+By implementing predictive machine learning models fed with informative data, Georgia users (drivers) can explore the most dangerous locations along their commutes during extreme weather conditions to either avoid or take extra precautions. Our study can also be extended to locations beyond Georgia, but for computational limitations, we focused on one state to explore.
 
 # Preprocessing
 
@@ -75,16 +73,18 @@ By implementing a predictive machine learning model fed with informative data, G
 
 During preprocessing, the data set is first cleaned up. This means:
 
+  - normalizing the data with respect to every feature
   - filling in missing categorical data with the mode of that feature
   - filling in missing numerical data with the median of that feature
-  - cleaning up date time objects by splitting into year, month, day, hour, minute, second attributes
-  - replace True/False data with 1/0
-  - apply one-hot encoding for categorical data
-    - ex. Sunrise_Sunset = {Day, Night}. Turn into Sunrise_Sunset_Day = {True, False}, Sunrise_Sunset_Night = {True, False}
+  - parsing date time objects by splitting them into year, month, day, hour, minute, and second attributes
+    - ex. 2016-02-08 06:07:59. Turns into month = 02, day = 08, weekday = 0 (Monday), hour = 06, minute = 07, second = 59.
+  - replacing True/False with 1/0
+  - applying one-hot encoding on categorical data
+    - ex. Sunrise_Sunset = {Day, Night}. Turn into Sunrise_Sunset_Day = {True, False}, Sunrise_Sunset_Night = {True, False}.
 
 ## Principle Component Analysis (PCA)
 
-- Aims to select principal components in Z space to attain the largest possible variance.
+- PCA aims to select principal components in a Z space in order to attain the largest possible variance.
 - Reduces dimensionality of data thereby reducing complexity.
 
 - For the original data set, each feature has some correlation/dependency on other features.
@@ -106,22 +106,21 @@ Logistic regression is a regression technique employed to fit accident systems. 
 
 ### Implementation
 
-Hyperparameters:
+Hyperparameters
 
--Penalty: Specifies the type of normalization used. The default value is l2.
+- Penalty: Specifies the type of normalization used. The default value is l2.
 
--Inverse of regularization(C): Smaller values of this hyper-parameter indicates a stronger regularization. Default value is 1.0
+- Inverse of regularization(C): Smaller values of this hyper-parameter indicates a stronger regularization. Default value is 1.0
 
--Random state : Seed used by the random number generator. Default value is None.
+- Random state : Seed used by the random number generator. Default value is None.
 
--Solver: Indicates which algorithm to use in the optimization problem. Default value is lbfgs.
+- Solver: Indicates which algorithm to use in the optimization problem. Default value is lbfgs.
 
--Max iter : max_iter represents maximum number of iterations taken for the solvers to converge a training process.
-
+- Max iter : max_iter represents maximum number of iterations taken for the solvers to converge a training process.
 
 ### Results
 
-Accuracy score = .527
+Accuracy score = 0.527
 ![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/Values%20vs%20Predictions.png)
 
 ### Discussion
@@ -159,10 +158,11 @@ score_test = svm.score(X_test, y_test)
 
 ![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/module2_data/GA/SupportVectorMachines/SVM_.png?token=AGCBXXSPGX2KQUD65FCI5YC6TTXY4 "C vs Gamma Accuracy")
 
-SVM struggled to fit onto the test after performing well on the training set, with 0.9997 and 0.479 accuracy respectively. An issue that was further researched is that SVM tends to work best for datasets consisting of fewer than 10,000 features. Our training and test sets were both greater and therefore may have caused intense overfitting due to an inappropriate selection of the number of support vectors.
+SVM struggled to fit onto the test after performing well on the training set, with 0.479 and 0.9997 accuracy, respectively.
 
 ### Discussion
 
+An issue that was further researched is that SVM tends to work best for datasets consisting of fewer than 10,000 samples. Both training and testing sets were greater and therefore may have caused intense overfitting due to an inappropriate selection of the number of support vectors.
 
 ## Gradient Boosting/Ensemble Learning using Decision Trees
 
@@ -172,15 +172,13 @@ Gradient boosting combines small decision trees (relatively weak estimators) thr
 
 ### Implementation
 
-Hyperparameters:
+Hyperparameters
 
-```
 - learning_rate
 - max_iter
 - max_leaf\_nodes
 - min_samples\_leaf
 - max_depth
-```
 
 ### Results
 
@@ -193,6 +191,7 @@ Results shown (for comparing both training and test sets to their respective gro
 - F1 Score (for each individual label)
 
 #### Single Run:
+
 Hyperparameters for results shown:
 
 - learning_rate: 0.1
@@ -228,8 +227,8 @@ Further steps to improve the algorithm would include more directed hyperparamete
 
 # Conclusion
 
-Overall, the project found some promise in its approach, but it is clear that perhaps more preprocessing or a different dataset is needed. Severity scores for traffic accidents were heavily skewed towards scores of either 1 or 2, which may have led to significant decreases in scoring metrics across all algorithms tested. However, each algorithm will be discussed and assessed on its own as well as compared/evaluated at the end of the discussion.
-
+Overall, the project found some promise in its approach, but it is clear that a deeper investigation of the reported features is necessary. Another factor, mentioned during the dataset discussion, was that there was an imbalance in severity class with a heavy skew towards severity scores of 2 and 3. Future work and interest may consider grouping these classes into low and high opposed to the set {1, 2, 3, 4}. This requires a better understanding of how an accident was initially categorized during data collection. Future work lies in the interest to determine if local spatial classifiers are a better representation of vehicle accidents then the global spatial classifiers demonstrated. Since each physical location described by latitude and longitude features may be greater or less suspectible to weather conditions, a classifier across an entire state or even city may eliminate any distinctions.
+d
 # References
 
 - [1] How do weather events impact roads? (2018). Federal Highway Administration. Retrieved from 
