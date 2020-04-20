@@ -121,7 +121,7 @@ Hyperparameters
 ### Results
 
 Accuracy score = 0.527
-![alt text](https://github.com/alexanderfache6/traffic-accident-weather-analysis/blob/master/code/Values%20vs%20Predictions.png)
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/Values%20vs%20Predictions.png?token=AGCBXXTOR4R3VUQJ5FEGKQ26U5FDY)
 
 ### Discussion
 
@@ -158,7 +158,7 @@ score_test = svm.score(X_test, y_test)
 
 ### Results
 
-![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/module2_data/GA/SupportVectorMachines/SVM_.png?token=AGCBXXSPGX2KQUD65FCI5YC6TTXY4 "C vs Gamma Accuracy")
+![alt text](https://raw.githubusercontent.com/alexanderfache6/traffic-accident-weather-analysis/master/code/module2_data/GA/SupportVectorMachines/SVM_.png?token=AGCBXXQRQKM4JW2QVTN4QB26U5FBK "C vs Gamma Accuracy")
 
 SVM struggled to fit onto the test after performing well on the training set, with 0.479 and 0.9997 accuracy, respectively.
 
@@ -230,7 +230,7 @@ Further steps to improve the algorithm would include more directed hyperparamete
 # Conclusion
 
 Overall, the project found some promise in its approach, but it is clear that a deeper investigation of the reported features is necessary. Another factor, mentioned during the dataset discussion, was that there was an imbalance in severity class with a heavy skew towards severity scores of 2 and 3. Future work and interest may consider grouping these classes into low and high opposed to the set {1, 2, 3, 4}. This requires a better understanding of how an accident was initially categorized during data collection. Future work lies in the interest to determine if local spatial classifiers are a better representation of vehicle accidents then the global spatial classifiers demonstrated. Since each physical location described by latitude and longitude features may be greater or less suspectible to weather conditions, a classifier across an entire state or even city may eliminate any distinctions.
-d
+
 # References
 
 - [1] How do weather events impact roads? (2018). Federal Highway Administration. Retrieved from 
