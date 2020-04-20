@@ -112,11 +112,11 @@ Hyperparameters
 
 - Inverse of regularization(C): Smaller values of this hyper-parameter indicates a stronger regularization. Default value is 1.0
 
-- Random state : Seed used by the random number generator. Default value is None.
+- Random state: Seed used by the random number generator. Default value is None.
 
 - Solver: Indicates which algorithm to use in the optimization problem. Default value is lbfgs.
 
-- Max iter : max_iter represents maximum number of iterations taken for the solvers to converge a training process.
+- Max iter: max_iter represents maximum number of iterations taken for the solvers to converge a training process.
 
 ### Results
 
