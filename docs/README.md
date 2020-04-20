@@ -125,6 +125,8 @@ Accuracy score = 0.527
 
 ### Discussion
 
+Logistic regression will not perform well with variables that are very similar or correlated to each other. The presence of certain attributes that are similar and correlated to each other could've caused this algorithm to not perform as well.
+
 ## Support Vector Machine (SVM)
 
 ### Description
